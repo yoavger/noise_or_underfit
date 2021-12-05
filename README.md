@@ -1,7 +1,7 @@
 # Using Recurrent Neural Network to differentiate noise from underfit #
 ---------------
 First cheekpoint of the project  
-All code can be run form the main_simulation_and_fit notebook
+All code can be run from the main_simulation_and_fit notebook
 
 ---------------
 This repository includes 3 parts:
