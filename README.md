@@ -1,7 +1,7 @@
 # Using Recurrent Neural Network to differentiate noise from underfit #
 ---------------
 First cheekpoint of the project  
-All code can be run from the main_simulation_and_fit notebook
+All code can be run from  code/main_simulation_and_fit.ipynb
 
 ---------------
 This repository includes 3 parts:
@@ -26,3 +26,4 @@ seaborn
 matplotlib   
 scipy   
 tqdm   
+jupyter notebook 
