@@ -1,11 +1,11 @@
 # Using Recurrent Neural Network to differentiate noise from underfit #
 ---------------
 First cheekpoint of the project  
-All code can be run form the main_simulation_and_fit notebook
+All code can be run from  code/main_simulation_and_fit.ipynb
 
 ---------------
 This repository includes 3 parts:
-###  1. running simulation on the reduce two-step task () of two RL models: ###
+###  1. Running simulation on the reduce two-step task () of two RL models: ###
 > Hybrid model-based model-free agent  
 > Noisy win-stay-loss-shift
 ###  2. Fitting 3 models on the behavior measured during simulation ###
@@ -26,3 +26,4 @@ seaborn
 matplotlib   
 scipy   
 tqdm   
+jupyter notebook 
