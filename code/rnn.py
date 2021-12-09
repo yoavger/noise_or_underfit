@@ -383,3 +383,102 @@ def on_policiy_tst(sim_model, num_of_trials, reversal_each_trials, n_cells):
     df = pd.DataFrame(dic)
     update_data_frame(df)   
     return df, activity_dict
+
+def train_a_model(path, train_arr, test_arr, num_of_trials, n_cells, lr, epochs, batch_size, cp_callback):
+    """
+    this funcation train an RNN model for tuning hyperparameters 
+
+    Args:
+        train_data: data to train on 
+        train_arr:  block number of the train data 
+        test_data: data to test on 
+        test_arr: block number of the test data 
+        num_of_trials: num of trials of each block 
+        n_cells: number of recurrent units in the hidden layer of the network 
+        lr:learning rate of the optimizers
+        epochs: number of traning iteration 
+        batch_size: number of trial to input the rnn each optimization step 
+        cp_callback: root to save model weight 
+
+    Returns:
+        model: model post traning 
+        sim_model: model for off-policy  simulations
+        hist: accuarcy and loss of the train and test sets 
+    """
+    
+    reward, action, state = preprocessing_from_csv(
+                                          path,
+                                          num_of_trials,
+                                          train_arr)
+
+    
+    X_train , y_train = one_hot_encoding(reward, action, state, n_actions=2, n_state=2)
+    
+    reward, action, state = preprocessing_from_csv(
+                                          path,
+                                          num_of_trials,
+                                          test_arr)
+
+    
+    X_test , y_test = one_hot_encoding(reward, action, state, n_actions=2, n_state=2)
+    
+    
+    model, sim_model = create_model_gru(n_actions=2, n_state=2, n_cells=n_cells)
+    
+    model, initial_rnn_state = compile_model(model,
+                                             lr,X_train.shape[0],
+                                             n_cells)
+
+    # training the model
+    hist = model.fit(x=[X_train, initial_rnn_state],
+                     y=y_train,
+                     epochs=epochs,
+                     batch_size=batch_size,
+                     verbose=0,
+                     validation_data=([X_test,initial_rnn_state],y_test))
+
+    return model, sim_model, hist
+
+
+# # Apply PCA, boilerplate sklearn
+# from sklearn.decomposition import PCA
+
+# num_of_trials = len(df)
+# rewards = np.array(df['reward'])
+# transations = np.array(df['transition_type'])
+
+# # Concatenate activity for PCA
+# activity = np.concatenate(list(activity_dict[i] for i in range(num_of_trials)), axis=0)
+# print('Shape of the neural activity: (Time points, Neurons): ', activity.shape)
+
+# pca = PCA(n_components=2)
+# pca.fit(activity)  # activity (Time points, Neurons)
+# activity_pc = pca.transform(activity)  # transform to low-dimension
+# print('Shape of the projected activity: (Time points, PCs): ', activity_pc.shape)
+
+# # Project each trial and visualize activity
+
+# # Plot all trials in ax1, plot fewer trials in ax2
+# fig, ax1= plt.subplots(1, 1, sharey=True, sharex=True, figsize=(8, 8))
+
+# for i in range(1,num_of_trials):
+#     # Transform and plot each trial
+#     activity_pc = pca.transform(activity_dict[i])  # (Time points, PCs)
+
+#     re = rewards[i-1]
+#     tr = transations[i-1]
+#     if (re == 1) and (tr==1):
+#         color = 'red'
+#     elif (re == 0) and (tr==0):
+#         color = 'blue'
+#     elif (re == 1) and (tr==0):
+#         color = 'yellow'
+#     else:
+#         color = 'green'
+
+#     _ = ax1.plot(activity_pc[:, 0], activity_pc[:, 1], 'o-', color=color)
+  
+      
+# ax1.set_title('{:d} Trials'.format(400))
+# ax1.set_xlabel('PC 1')
+# ax1.set_ylabel('PC 2')

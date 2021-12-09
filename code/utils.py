@@ -45,6 +45,15 @@ def configuration_parameters_nwsls():
     }
     return parameters
 
+def configuration_parameters_wsls():
+    # configuration of win-stay-loss-shift parameters 
+    # 2 free parameters p_stay_win, p_loss_shift     
+    parameters = {
+                'p_stay_win' : np.random.uniform(), # 0 <= p_stay_win <= 1
+                'p_stay_loss' : np.random.uniform() # 0 <= p_stay_loss <= 1
+    }
+    return parameters
+
 class DataOfSim():
     # this class stores all the data of one simulation
     # storing the following: action_1, stage_2_state, transation_type, action_2, reward
@@ -55,6 +64,7 @@ class DataOfSim():
         self.transition_list = ['' for i in range(num_of_trials)]
         self.reward_list = np.zeros(num_of_trials) 
         self.probs = np.zeros(num_of_trials)
+        self.correct = np.zeros(num_of_trials)
         self.delta_q = np.zeros(num_of_trials)
 
     def createDic(self):
@@ -64,6 +74,7 @@ class DataOfSim():
                 'transition_type' : self.transition_list,
                 'reward' : self.reward_list,
                 'probs' : self.probs,
+                'correct': self.correct,
                 'delta_q': self.delta_q       
             }
         return dic 

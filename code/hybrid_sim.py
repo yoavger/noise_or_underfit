@@ -76,6 +76,8 @@ def hybrid_sim(param, num_of_trials, transition_prob, reward_probs):
         # update q_mf according to q_learning formula
         q_mf[0,action_1] = q_mf[0,action_1] + alpha*p_e_1 + eligibility_trace*(alpha*p_e_2) 
         q_mf[state,0] = q_mf[state,0] + alpha*p_e_2
+        
+        correct = 0 if reward_probs[t,0,0] <= 0.2 else 1 
 
         # stroe data of the trial
         data.action_1_list[t] = action_1
@@ -83,6 +85,7 @@ def hybrid_sim(param, num_of_trials, transition_prob, reward_probs):
         data.transition_list[t] = transition_type
         data.reward_list[t] = reward
         data.probs[t] = prob_0
+        data.correct[t] = correct
         data.delta_q[t] = q_net[0] - q_net[1]
        
     df = pd.DataFrame(data.createDic())

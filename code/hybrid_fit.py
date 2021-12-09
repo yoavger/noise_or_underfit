@@ -3,7 +3,6 @@ import pandas as pd
 from utils import *
 from scipy.optimize import minimize
 
-
 def hybrid_fit(df,num_of_parameters_to_recover):
     """
     this funcation performs parameters recovery of hybrid agent on the educe two-stage task  
