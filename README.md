@@ -14,7 +14,7 @@ This repository includes 3 parts:
 > logistic regression   
 > RNN  
 ### 3. Predicting the behavior measured during simulation of withheld blocks with the fitted models ###
-> Hybrid model-based model-free agent 
+> Hybrid model-based model-free agent   
 > win-stay-loss-shift   
 > logistic regression   
 > RNN   
