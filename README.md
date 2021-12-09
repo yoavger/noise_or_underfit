@@ -1,4 +1,4 @@
-# Using Recurrent Neural Network to differentiate noise from underfit #
+# project_010 #
 ---------------
 First cheekpoint of the project  
 All code can be run from  code/main_simulation_and_fit.ipynb
