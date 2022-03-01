@@ -11,7 +11,7 @@ Presumably two factors contribute to this shortcoming:
 However, when measuring behavior of individuals on cognitive task, these two factors are entangled and therefore hard to dissociate.  
 Here we examine (in-silico) the use of advances in data-driven machine learning algorithms disentangled this two factors.  
 
-## Dataset and objective
+## Dataset
 The dataset inclueded behavior of 500 artificial agent of 5 theoretical models (100 agent from each model):
 1. Model-Free RL (MF). 
 2. Model-Based RL (MB). 
@@ -32,16 +32,4 @@ We used RNN in three condition for classification. In two condition we fixed the
 ## Difference in the averaged **nlp** 
 ![image](https://github.com/yoavger/noise_or_underfit/blob/main/plots/bar_plot.png)
 Here, for each group of agents (5 groups corresponding to the 5 theoretical models) we averaged the **nlp** that each model obtains. Then we calculated the diffrence between the mean  **nlp** of the true theoretical model and the mean **nlp**  of all other models.  Across all models RNN in second only for the true generative model of each group of agents.
-
-
-
-
-
-
-
-
-
-
-
-
 
