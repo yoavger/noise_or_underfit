@@ -16,6 +16,9 @@ The experiment starts with participants being told that they own a business and 
 ![image](https://github.com/yoavger/noise_or_underfit/blob/main/plots/bar_plot.png)
 
 
+<!-- <img src="https://github.com/yoavger/noise_or_underfit/blob/main/plots/cm_100.png" width="35%"> -->
+
+
 
 ![image](https://github.com/yoavger/noise_or_underfit/blob/main/plots/noise_2.png)
 
