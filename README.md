@@ -1,4 +1,4 @@
-# noise (working_title)
+# noise (working title)
 git repo accompanying the project 
 
 ## Background 
