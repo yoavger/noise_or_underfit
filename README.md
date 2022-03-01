@@ -1,6 +1,4 @@
 # noise (working_title)
-first Cheekpoint of project 
-
 git repo accompanying the project 
 
 ## Background 
@@ -10,9 +8,22 @@ Presumably two factors contribute to this shortcoming:
 1. Higher internal noise (stochasticity in behavior).
 2. Deployment of different model (unknown to the researcher).  
 
-
 However, when measuring behavior of individuals on cognitive task, these two factors are entangled and therefore hard to dissociate.  
 Here we examine (in-silico) the use of advances in data-driven machine learning algorithms disentangled this two factors.  
+
+## Dataset 
+The dataset inclueded behavior of 500 artificial agent of 5 distinct theoretical models (100 agent from each model):
+1. Model-Free RL (MF)
+2. Model-Based RL (MB)
+3. Habitual model (habit)
+4. Win-Stay, Lose-Shift (WSLS)
+5. k-Dominant hand (kdh)
+Each agent was simulated on the reduce Two-Step task (TST) for 5 blocks containing 200 trials each .
+
+
+
+
+
 
 
 ![image](https://github.com/yoavger/noise_or_underfit/blob/main/plots/method.png)
