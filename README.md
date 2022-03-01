@@ -47,5 +47,5 @@ run the following notebook:
 noise_or_underfit/code/sim_and_fit.ipynb
 ```
 each agent behavior is saved in ```noise_or_underfit/data``` file in the following format:
-{model}_agent_{# agent}_sim_{# block}
+```{model}_agent_{# agent}_sim_{# block}```
 
