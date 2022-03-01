@@ -26,7 +26,9 @@ two models we considered as theory-independent models can help classify each age
 ## Leave-one-block out cross-validation (LOOCV)
 To test this we act as follow. At each round (5 in total) we assumed that all agents came from only one theoretical model and compared the fit (predictive accuracy) of the assumed theoretical model against the fit of RNN and LR. We adapted an Leave-one-block out cross-validation approach. were for each agent 
 
-Inline equation: $equation$
+```math
+$a^2+b^2=c^2$
+```
 
 
 
@@ -37,9 +39,7 @@ Inline equation: $equation$
 
 
 
-```math
-a^2+b^2=c^2
-```
+
 
 
 
