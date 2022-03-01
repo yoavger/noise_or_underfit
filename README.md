@@ -9,8 +9,9 @@ Nonetheless, studies have found that computational models can systematically fai
 Presumably two factors contribute to this shortcoming:  
 1. Higher internal noise (stochasticity in behavior).
 2. Deployment of different model (unknown to the researcher).  
-However, when measuring behavior of individuals on cognitive task,  
-these two factors are entangled and therefore hard to dissociate.  
+
+
+However, when measuring behavior of individuals on cognitive task, these two factors are entangled and therefore hard to dissociate.  
 Here we examine (in-silico) the use of advances in data-driven machine learning algorithms disentangled this two factors.  
 
 
