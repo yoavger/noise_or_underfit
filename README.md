@@ -46,21 +46,15 @@ run the following notebook:
 ```
 noise_or_underfit/code/sim_and_fit.ipynb
 ```
-this notebook saves each agent behavior in a csv file ```noise_or_underfit/data``` file in the following format:```{model}_agent_{# agent}_sim_{# block}```
-and also creeat a csv file with the results of the fitting and predecation. 
+the notebook saves each agent behavior in a csv file ```noise_or_underfit/data``` file in the following format:```{model}_agent_{# agent}_sim_{# block}```
+and also creeat a csv file under ```noise_or_underfit/results``` with the results of the fitting and predecation of each mdoel. 
 
-MantisBT version | Plugin version | Branch
-:---:|:---:|---
-2.x   | v2.x | 
-1.3.x | v1.5.x | 
-1.2.x | v1.4.1 | 
-
-- fitting the rnn model is done with the 
+- fitting the rnn model: 
 ```
 noise_or_underfit/code/rnn_fit.ipynb
 ```
 
-- diffrent analysis can be done with the following 
+- diffrent analysis on the data:
 ```
 noise_or_underfit/code/analysis/
 ```
