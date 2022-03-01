@@ -12,15 +12,19 @@ However, when measuring behavior of individuals on cognitive task, these two fac
 Here we examine (in-silico) the use of advances in data-driven machine learning algorithms disentangled this two factors.  
 
 ## Dataset 
-The dataset inclueded behavior of 500 artificial agent of 5 distinct theoretical models (100 agent from each model):
+The dataset inclueded behavior of 500 artificial agent of 5 theoretical models (100 agent from each model):
 1. Model-Free RL (MF). 
 2. Model-Based RL (MB). 
 3. Habitual model (habit). 
 4. Win-Stay, Lose-Shift (WSLS). 
-5. k-Dominant hand (kdh). 
-Each agent was simulated on the reduce Two-Step task (TST) for 5 blocks containing 200 trials each .
+5. k-Dominant hand (kdh).  
 
+Each agent was simulated on the reduce Two-Step task (TST) for 5 blocks containing 200 trials each. 
+Post simulation we pretended that the true generative theoretical model of each agent is unknown and sought to ask if
+Recurrent neural network and Logistic regression, two models we considered as theory-independent models can help classify each agent underlying theoretical model. 
 
+## Leave-one-block out cross-validation (LOOCV)
+Post simulation we 
 
 
 
