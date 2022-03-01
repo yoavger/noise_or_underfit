@@ -11,7 +11,7 @@ Presumably two factors contribute to this shortcoming:
 However, when measuring behavior of individuals on cognitive task, these two factors are entangled and therefore hard to dissociate.  
 Here we examine (in-silico) the use of advances in data-driven machine learning algorithms disentangled this two factors.  
 
-## Dataset 
+## Dataset and objective
 The dataset inclueded behavior of 500 artificial agent of 5 theoretical models (100 agent from each model):
 1. Model-Free RL (MF). 
 2. Model-Based RL (MB). 
@@ -20,11 +20,15 @@ The dataset inclueded behavior of 500 artificial agent of 5 theoretical models (
 5. k-Dominant hand (kdh).  
 
 Each agent was simulated on the reduce Two-Step task (TST) for 5 blocks containing 200 trials each. 
-Post simulation we pretended that the true generative theoretical model of each agent is unknown and sought to ask if Recurrent neural network and Logistic regression,   
+Post simulation we pretended that the true generative theoretical model of each agent is unknown and sought to ask if Recurrent neural network (RNN) and Logistic regression (LR),   
 two models we considered as theory-independent models can help classify each agent underlying theoretical model. 
 
 ## Leave-one-block out cross-validation (LOOCV)
-Post simulation we 
+To test this we act as follow. At each round (5 in total) we assumed that all agents came from only one theoretical model and compared the fit (predictive accuracy) of the assumed theoretical model against the fit of RNN and LR. We adapted an Leave-one-block out cross-validation approach. were for each agent 
+
+\begin{aligned}
+\dot{x} & = \sigma(y-x) \\
+\end{aligned}
 
 
 
