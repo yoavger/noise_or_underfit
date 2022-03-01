@@ -13,11 +13,11 @@ Here we examine (in-silico) the use of advances in data-driven machine learning 
 
 ## Dataset 
 The dataset inclueded behavior of 500 artificial agent of 5 distinct theoretical models (100 agent from each model):
-1. Model-Free RL (MF)
-2. Model-Based RL (MB)
-3. Habitual model (habit)
-4. Win-Stay, Lose-Shift (WSLS)
-5. k-Dominant hand (kdh)
+1. Model-Free RL (MF). 
+2. Model-Based RL (MB). 
+3. Habitual model (habit). 
+4. Win-Stay, Lose-Shift (WSLS). 
+5. k-Dominant hand (kdh). 
 Each agent was simulated on the reduce Two-Step task (TST) for 5 blocks containing 200 trials each .
 
 
