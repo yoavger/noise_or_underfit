@@ -40,7 +40,7 @@ Here, for each group of agents (5 groups corresponding to the 5 theoretical mode
 noise_or_underfit/code/analysis/nlp_bar_plot.ipynb
 ```
 
-## Running the experiments on your machine
+## Running the experiments 
 - simulating the agents, fitting the 5 theoretical models and Logistic regression model and calculating the **nlp** on withheld blocks
 run the following notebook:
 ```
@@ -49,23 +49,20 @@ noise_or_underfit/code/sim_and_fit.ipynb
 this notebook saves each agent behavior in a csv file ```noise_or_underfit/data``` file in the following format:```{model}_agent_{# agent}_sim_{# block}```
 and also creeat a csv file with the results of the fitting and predecation. 
 
-
-
-Compatibility
--------------
-
-Depending on which version of MantisBT you are using, please make sure to
-get the appropriate version of the source code.
-Use [release tags](https://github.com/mantisbt-plugins/csv-import/releases),
-or the relevant branch in the Plugin's GitHub repository, as per the table below:
-
 MantisBT version | Plugin version | Branch
 :---:|:---:|---
 2.x   | v2.x | 
 1.3.x | v1.5.x | 
 1.2.x | v1.4.1 | 
 
-Support
--------
+- fitting the rnn model is done with the 
+```
+noise_or_underfit/code/rnn_fit.ipynb
+```
+
+- diffrent analysis can be done with the following 
+```
+noise_or_underfit/code/analysis/
+```
 
 
