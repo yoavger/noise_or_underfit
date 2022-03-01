@@ -28,8 +28,24 @@ To test this we act as follow. At each round (5 in total) we assumed that all ag
 ## ROC curve. Classifaction of generative model for each round (different assumed model).   
 ![image](https://github.com/yoavger/noise_or_underfit/blob/main/plots/roc_0.png)
 We used RNN in three condition for classification. In two condition we fixed the number of training iteration for all agent (100 and 1000). In the third condition we varied the number of training iteration for each agent (early stopping). Best performance is acchived in the third condition, suppressing the fix condition and LR. 
+all agents behavior can be found in the data f
+```
+noise_or_underfit/code/analysis/classification_roc.ipynb
+```
 
 ## Difference in the averaged **nlp** 
 ![image](https://github.com/yoavger/noise_or_underfit/blob/main/plots/bar_plot.png)
 Here, for each group of agents (5 groups corresponding to the 5 theoretical models) we averaged the **nlp** that each model obtains. Then we calculated the diffrence between the mean  **nlp** of the true theoretical model and the mean **nlp**  of all other models.  Across all models RNN in second only for the true generative model of each group of agents.
+```
+noise_or_underfit/code/analysis/nlp_bar_plot.ipynb
+```
+
+## Running the experiments on your machine
+- simulating the agents, fitting the 5 theoretical models and Logistic regression model and calculating the **nlp** on withheld blocks
+run the following notebook:
+```
+noise_or_underfit/code/sim_and_fit.ipynb
+```
+each agent behavior is saved in ```noise_or_underfit/data``` file in the following format:
+{model}_agent_{# agent}_sim_{# block}
 
