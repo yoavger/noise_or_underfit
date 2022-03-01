@@ -5,12 +5,12 @@ git repo accompanying the project
 
 ## Background 
 Theory-driven computational modeling allows estimation of latent cognitive and neural variables.  
-Nonetheless, studies have found that computational models can systematically fail to describe some individuals. 
-Presumably two factors contribute to this shortcoming: 
+Nonetheless, studies have found that computational models can systematically fail to describe some individuals.  
+Presumably two factors contribute to this shortcoming:  
 1. Higher internal noise (stochasticity in behavior).
 2. Deployment of different model (unknown to the researcher).  
 However, when measuring behavior of individuals on cognitive task,  
-these two factors are entangled and therefore hard to dissociate. 
+these two factors are entangled and therefore hard to dissociate.  
 Here we examine (in-silico) the use of advances in data-driven machine learning algorithms disentangled this two factors.  
 
 
