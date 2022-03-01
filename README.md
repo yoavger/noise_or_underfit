@@ -20,7 +20,7 @@ The dataset inclueded behavior of 500 artificial agent of 5 theoretical models (
 5. k-Dominant hand (kdh).  
 
 Each agent was simulated on the reduce Two-Step task (TST) for 5 blocks containing 200 trials each. 
-Post simulation we pretended that the true generative theoretical model of each agent is unknown and sought to ask if Recurrent neural network (RNN) and Logistic regression (LR), two models we considered as theory-independent models can help classify each agent underlying theoretical model. 
+Post simulation we pretended that the true generative theoretical model of each agent is unknown and sought to ask if Recurrent neural network (RNN) and Logistic regression (LR), two models we considered as theory-independent can help classify each agent underlying theoretical model. 
 
 ## Leave-one-block out cross-validation (LOOCV)
 To test this we act as follow. At each round (5 in total) we assumed that all agents came from only one theoretical model and compared the fit (predictive accuracy) of the assumed theoretical model against the fit of RNN and LR. We adapted an Leave-one-block out cross-validation approach. For each agent 4 block of his behavior (800 trials) were used to train a model and 1 witheld block (200 trials) was used to see how well the fitted model can generalize to unseen data. We avarged acrross all witheld blocks to obtain a single predictive accuracy score we denote as **nlp_m^i** (negative log probability; lower is better; m for the model used to fit behavior; i for the agent index). Calculating the difference between the **nlp_m^i** of the assumed theoretical model and the two theory-independent models allow us to say which model better explains the behavior of each agent. (lower **nlp** better explantion). We classified each agent to one of two categories, assumed theoretical model or unknown model. This can also be formultaed as a one-vs-all classifaction probelm. 
@@ -58,5 +58,3 @@ noise_or_underfit/code/rnn_fit.ipynb
 ```
 noise_or_underfit/code/analysis/
 ```
-
-
