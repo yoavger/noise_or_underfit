@@ -32,6 +32,9 @@ Classification by RNN in three condition. In two condition we fixed the number o
 ```
 noise_or_underfit/code/analysis/classification_roc.ipynb
 ```
+## Noise investigation
+![image](https://github.com/yoavger/noise_or_underfit/blob/main/plots/noise_2.png)  
+We quantified the amount of true noise each agent holds (using the true parameters of the agent). Then we plotted the accuracy of our classification as a function noise level for different classifiers.  
 
 ## Δ Mean ***nlp***
 ![image](https://github.com/yoavger/noise_or_underfit/blob/main/plots/bar_plot.png)
@@ -39,6 +42,7 @@ Here, for each group of agents (5 groups corresponding to the 5 theoretical mode
 ```
 noise_or_underfit/code/analysis/nlp_bar_plot.ipynb
 ```
+
 
 ## Running the experiments 
 - simulating the agents, fitting the theoretical models and Logistic regression model and calculating the ***nlp*** on withheld blocks
